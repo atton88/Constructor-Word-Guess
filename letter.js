@@ -9,7 +9,7 @@ var Letter = function(char){
         if (this.guessed) {
             return this.char;
         } else {
-            return "___";
+            return "_";
         }
     }
 
