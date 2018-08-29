@@ -1,4 +1,4 @@
-var Letter = require("letter.js");
+var Letter = require("./letter.js");
 
 // Word constructor function
 var Word = function() {
@@ -15,10 +15,10 @@ var Word = function() {
 
     this.createWord = function(str) {
         for (var i = 0; i < str.length; i++){
-            var newLetter = new Letter(str);
-            letters.push(newLetter);
+            var newLetter = new Letter(str[i]);
+            this.letters.push(newLetter);
         }
     }
 }
 
-module.export = Word;
+module.exports = Word;

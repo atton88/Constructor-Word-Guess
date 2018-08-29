@@ -6,8 +6,8 @@ var Letter = function(char){
 
     // returns letter if guessed or ___ if not
     this.display = function() {
-        if (guessed) {
-            return char;
+        if (this.guessed) {
+            return this.char;
         } else {
             return "___";
         }
@@ -15,10 +15,10 @@ var Letter = function(char){
 
     // checks if guess is correct
     this.isChar = function(guess) {
-        if (char === guess){
+        if (this.char === guess){
             this.guessed = true;
         }
     }
 }
 
-module.export = Letter;
+module.exports = Letter;
