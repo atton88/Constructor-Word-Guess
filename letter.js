@@ -1,4 +1,3 @@
-
 // letter constructor function
 var Letter = function(char){
     this.char = char;
