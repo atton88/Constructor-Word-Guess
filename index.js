@@ -41,7 +41,13 @@ function playGame() {
         lettersGuessed.push(guess);
         poke.guessLetter(guess);
         console.log("\n" + poke.toString() + "\n");
-        playGame();
+        if (poke.isSolved()){
+            console.log("YOU WIN!");
+            console.log("Next Game");
+            startGame();
+        } else {
+            playGame();
+        }
     })
 
     

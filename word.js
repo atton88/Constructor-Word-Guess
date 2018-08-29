@@ -19,10 +19,20 @@ var Word = function(str) {
         return wordStr;
     }
 
+    // function guesses the letter against the letter objects
     this.guessLetter = function(c) {
         for (var i = 0; i < this.letters.length; i++){
             this.letters[i].isChar(c);
         }
+    }
+
+    this.isSolved = function() {
+        for (var i = 0; i < this.letters.length; i++) {
+            if (!this.letters[i].guessed) {
+                return false;
+            }
+        }
+        return true;
     }
 }
 
